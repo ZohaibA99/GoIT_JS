@@ -11,5 +11,9 @@ The body mass index should be rounded to one decimal place;*/
 let weight = '88,3';
 let height = '1.75';
 
-const bmi = ;
+let convertWeight = parseFloat(weight);
+let convertHeight = parseFloat(height);
+
+
+const bmi = convertWeight / Math.pow(convertHeight, 2);
 console.log(bmi); // 28.8
