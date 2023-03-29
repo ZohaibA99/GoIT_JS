@@ -8,3 +8,16 @@ Check password like this:
 If the password is "I'm an admin", then output the string "Hello!"
 Else output the string "Wrong password" */
 
+const login = prompt("Enter login");
+
+if (login === "Admin"){
+    const password = prompt("Enter password");
+
+    if(password === "I'm an admin"){
+        console.log("HEllo!");
+    } else{
+        console.log("Wrong Password");
+    }
+} else {
+    console.log('Canceled');
+}
