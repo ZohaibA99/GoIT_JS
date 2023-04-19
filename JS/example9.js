@@ -16,7 +16,28 @@ const cars = [
   { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false }
 ];
 
-const sortByModel = (cars, order) => {};
+const sortByModel = (cars, order) => {
+  const sortedCars = [...cars];
+
+  if(order === "asc"){
+    sortedCars.sort((a, b) => {
+      if(a.model > b.model){
+        return 1;
+      }
+      return -1;
+    })
+  }
+  else{
+    sortedCars.sort((a,b) => {
+      if (a.model < b.model){
+        return 1;
+      }
+      return -1;
+    })
+  }
+
+  return sortedCars;
+};
 
 console.table(sortByModel(cars, 'asc'));
 console.table(sortByModel(cars, 'desc'));

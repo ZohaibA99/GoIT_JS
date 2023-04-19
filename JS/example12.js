@@ -15,6 +15,10 @@ const cars = [
 ];
 
 
-const getSortedCarsOnSale = cars => {};
+const getSortedCarsOnSale = cars => {
+    const carsOnSale = cars.filter(car => {return car.onSale});
+
+    return carsOnSale.sort((a , b) => a.price -  b.price)
+};
 
 console.table(getSortedCarsOnSale(cars));

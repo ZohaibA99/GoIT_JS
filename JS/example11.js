@@ -14,6 +14,15 @@ const cars = [
     { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false }
   ];
 
-const getModelsOnSale = cars => {};
+const getModelsOnSale = cars => {
+  const carsOnSale = cars.filter(car => {
+    return car.onSale;
+  });
+
+  const carModels = carsOnSale.map(car => {
+    return car.model;
+  })
+  return carModels;
+};
 
 console.table(getModelsOnSale(cars));  

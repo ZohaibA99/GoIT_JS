@@ -13,6 +13,13 @@ const cars = [
     { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false }
   ];
 
-const getTotalAmount = cars => {};
+const getTotalAmount = cars => {
+  const total = cars.reduce((total, car) => {
+    total += car.amount;
+    return total;
+  }, 0);
+
+  return total;
+};
 
 console.log(getTotalAmount(cars));

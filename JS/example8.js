@@ -14,6 +14,6 @@ const cars = [
   { make: 'Ford', model: 'Explorer', type: 'suv', amount: 6, price: 31660, onSale: false }
 ];
 
-const sortByDescendingPrice = cars => {};
+const sortByDescendingPrice = cars => [...cars].sort((a,b) => b.price - a.price);
 
 console.table(sortByDescendingPrice(cars));
