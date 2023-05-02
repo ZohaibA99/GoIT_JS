@@ -1,28 +1,53 @@
 /* 
-Write the following functions:
+Write a Blogger class to create a blogger object with the following properties:
 
-createProduct(obj, callback) - accepts a product object without an id, and also callback. 
-The function creates a product object by adding a unique identifier to it in property id 
-and calls the callback passing it the created object.
+email - mail, line
+age - age, number
+numberOfPosts - number of posts, number
+topics - an array of topics the blogger specializes in
+The class expects one parameter - object of settings with the same name properties.
 
-logProduct(product) - callback accepting a product object and logging it to console
+Add a getInfo() method that returns string: User ${mail} 
+is ${age} years old and has ${number of posts} posts.
 
-logTotalPrice(product) - callback receiving product object and logging the 
-total value of the item in the console
+Add the updatePostCount(value) method, which in the value 
+parameter takes number of posts to add to the user.
 */
 
-function createProduct(partialProduct, callback) {
-    const product = {id: Date.now(), ...partialProduct}
-    callback(product);
+class Blogger{
+  constructor({name, age, numberOfPosts, topics}){
+    this.name = name;
+    this.age = age;
+    this.numberOfPosts = numberOfPosts;
+    this.topics = topics;
+  }
+
+  getInfo(){
+    return `User ${this.name} is ${this.age} years old and had ${this.numberOfPosts} posts.`;
+  }
+
+  updatePostCount(value){
+    this.numberOfPosts = value;
+  }
+
 }
 
-function logProduct(product) {
-    console.log(product);
-}
-
-function logTotalPrice(product) {
-    console.log(`Price: ${product.price * product.quantity}`)
-}
-
-createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
-createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
+const mango = new Blogger({
+    name: 'mango@mail.com',
+    age: 24,
+    numberOfPosts: 20,
+    topics: ['tech', 'cooking'],
+  });
+  console.log(mango.getInfo()); // User mango@mail.com is 24 years old and has 20 posts
+  mango.updatePostCount(5);
+  console.log(mango.getInfo()); // User mango@mail.com is 24 years old and has 25 posts
+  
+const poly = new Blogger({
+    name: 'poly@mail.com',
+    age: 19,
+    numberOfPosts: 17,
+    topics: ['sports', 'gaming', 'health'],
+  });
+  console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 17 posts
+  poly.updatePostCount(4);
+  console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 21 posts

@@ -1,15 +1,27 @@
-function hello(){
-    console.log("hellow");
+class User{
+    name;
+
+    #email;
+
+    constructor({name, email}){
+        this.name = name;
+        this.#email = email;
+    }
+
+    get email(){
+        return this.#email;
+    }
+
+    set email(newEmail){
+        this.#email = newEmail;
+    }
 }
 
-function greetUser(name, callback){
-    callback();
-    console.log(name);
-}
+const mango = new User({ name: "Mango", email: "mango@mail.com" });
+console.log(mango.email); // mango@mail.com
+mango.email = "mango@supermail.com";
+console.log(mango.email);
 
-greetUser("zohaib", hello);
-
-const greetUser = (name, callback) => {
-    callback();
-    console.log(name);
+class a extends b{
+    
 }
