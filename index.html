@@ -3,20 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM</title>
+    <title>Throttle/debounce and lazyload</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- <ul id="list">
-      <li>qwerty</li>
-      <li>qwerty</li>
-      <li>qwerty</li>
-      <li>qwerty</li>
-      <li>qwerty</li>
-      <li>qwerty</li>
-    </ul> -->
 
-    <div id="container"></div>
+    <!-- <p class="cta">Scroll me</p>
 
+<div class="event-counter">
+  <div class="box">
+    <p>No timing function</p>
+    <span class="output vanilla">0</span>
+  </div>
+
+  <div class="box">
+    <p>Throttled</p>
+    <span class="output throttled">0</span>
+  </div>
+
+  <div class="box">
+    <p>Debounce</p>
+    <span class="output debounced">0</span>
+  </div>
+</div> -->
+
+    <!-- <div class="counter">
+      <h2>Scroll</h2>
+      <div class="box">Without Throttling: <span id="outputScrollStandart">0</span></div>
+      <div class="box">With Throttling: <span id="outputScrollThrottling">0</span></div>
+    </div> -->
+
+    <!-- ======================= -->
+
+    <!-- <div class="counter">
+      <h2>Resize</h2>
+      <div class="box">Without Throttling: <span id="outputResizeStandart">0</span></div>
+      <div class="box">With Throttling: <span id="outputResizeThrottling">0</span></div>
+    </div> -->
+
+    <!-- ======================= -->
+
+<!--     
+    <label class="input">
+      Enter your name
+      <input type="text" placeholder="Name" id="nameInput" />
+    </label> -->
+
+    <!-- ======================= -->
+
+    <form id="signInForm">
+      <fieldset>
+        <legend>Sign In</legend>
+        <label>
+          Enter your login
+          <input type="text" placeholder="Login" />
+        </label>
+        <label>
+          Enter your password
+          <input type="password" placeholder="Password" />
+        </label>
+      </fieldset>
+    </form>
+
+
+
+    
+    <!-- implementing lazy load with lazySizes library
+    first give class 'lazyload'
+    in attribute "data-src" -> put path to original image
+    in attribut "src" -> put path to placeholder image(image rendered before you render the actual image)-->
+    <!-- <img class="lazyload" data-src="this-contains-path-to-orgrinalImage" src="this-contains-path-to-placeholderImage" alt="What the image is in words"/>  -->
+
+    <!-- orignal way of lazy loading
+      THIS DOESN'T WORK FOR SAFARI SO USE THE lazysizes cdnjs library
+      look at loading attribute 
+      original image goes to src attribute
+     -->
+     <!-- <img src="this contains the path to image" alt="" loading="lazy/eager/auto"/> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" 
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" 
+    integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script> -->
     <script src="/js/script.js"></script>
   </body>
 </html>
