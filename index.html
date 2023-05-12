@@ -1,22 +1,40 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM</title>
+    <title>Event Delegation</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- <ul id="list">
-      <li>qwerty</li>
-      <li>qwerty</li>
-      <li>qwerty</li>
-      <li>qwerty</li>
-      <li>qwerty</li>
-      <li>qwerty</li>
-    </ul> -->
+<!-- 
+    <div id="parentDiv">
+      <a href="https://google.com" target="_blank" id="childA">Child A</a>
+      <a href="https://google.com" target="_blank">Child B</a>
+    </div> -->
 
-    <div id="container"></div>
+    <!-- ================================ -->
 
-    <script src="/js/script.js"></script>
+    <!-- <section>
+      Section
+      <div>
+        DIV
+        <p>P</p>
+      </div>
+    </section> -->
+
+    <!-- ================================ -->
+
+    <div class="container">
+      <h2 class="title">How much does barbecue meat cost?</h2>
+      <form action="#" class="form" id="form">
+        <label for="price">Price USD</label>
+        <input type="text" id="price" name="price" value="50" />
+        <label for="quantity">Amount<span class="amount" id="amount">1</span>pound </label>
+        <input type="range" id="quantity" name="quantity" value="1" min="1" , max="20" />
+      </form>
+      <p class="text-right total" id="total"></p>
+    </div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
